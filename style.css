@@ -1,0 +1,15 @@
+#main-current {
+    width: 600px;
+    height: 900px;
+    background-color: lightgray;
+}
+
+#previously-searched {
+    width: 300px;
+    height: 900px;
+    background-color: lightgray;
+}
+
+#border {
+    border-radius: 25px;
+}
