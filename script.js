@@ -42,8 +42,8 @@ function weatherForcast(weather) {
 }
 
 $("#add-city").on("click", function(current) {
-            current.preventDefault();
-            var inputWeather = $("#city-input").val().trim();
+    current.preventDefault();
+    var inputWeather = $("#city-input").val().trim();
     
     weatherForcast(inputWeather);
         });
@@ -103,3 +103,91 @@ $("#add-city").on("click", function(current) {
 // $("#add-city").on("click", function(weather) {
 //             event.preventDefault();
 // var weather = $("#city-input").val();
+
+
+
+
+
+// five day forcast test1
+function fiveDay(weather) {
+
+    // querying weather api
+    var queryURL = 'http://api.openweathermap.org/data/2.5/weather?q=' + weather + "&units=imperial" + "&APPID=860338c2b1cf62410a87894b92d022a6";
+            
+    $.ajax({
+    url: queryURL,
+    method: "GET"
+    }).then(function(response){
+    console.log(response);
+
+    $("#five-day").empty();
+    
+    console.log(queryURL);
+    console.log(response);
+    console.log(response.weather[0].icon);
+        var newIcon = $("<img>").attr("http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
+        var newHT = $("<h5>").text("Temperature: " + response.main.temp + " degrees");
+        var newHH = $("<h5>").text("Humidity: " + response.main.humidity +"%");
+ 
+        var newDiv = $("<div>");
+
+        newDiv.append(newIcon, newHT, newHH);
+
+        $("#five-day").html(newDiv);
+    });
+}
+
+$("#add-city").on("click", function(current) {
+    current.preventDefault();
+    var inputWeather = $("#city-input").val().trim();
+    
+    fiveDay(inputWeather);
+        });
+
+
+
+
+        // test loop
+        function fiveDay2(weather) {
+            
+        var queryURL = 'http://api.openweathermap.org/data/2.5/weather?q=' + weather + "&units=imperial" + "&APPID=860338c2b1cf62410a87894b92d022a6";
+            
+    $.ajax({
+    url: queryURL,
+    method: "GET"
+    }).then(function(response){
+    console.log(response);
+
+    $("#five-day2").empty();
+        
+                if (data !== null && data.list !== null) {
+                    var result = data,
+                        weather = {},
+                        compass = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW', 'N'],
+                        image404 = 'https://s.yimg.com/os/mit/media/m/weather/images/icons/l/44d-100567.png';
+                    console.log(result);
+                    var weathers = [];
+                    for (var i = 0; i < 3; i++) {
+                        weathers.push({
+                            temp: Math.round(result.list[i].temp.day),
+                            code: result.list[i].weather[0].id,
+                            text: fiveDay2(result.list[i].weather[0].description),
+                            date: new Date(result.list[i].dt * 1000)
+                        });
+                    }
+                    console.log(weathers);
+                    var today = weathers[0];
+                    var tomorrow = weathers[1];
+                    var dayAfterTomorrow = weathers[2];
+                } 
+                $("#add-city").on("click", function(current) {
+                    current.preventDefault();
+                    var inputWeather = $("#city-input").val().trim();
+                    
+                    fiveDay2(inputWeather);
+                        });
+
+            }
+        );
+        
+        }
