@@ -1,7 +1,6 @@
 #main-current {
-    width: 600px;
-    height: 900px;
-    background-color: lightgray;
+    border-radius: 15px;
+    color: lightgray;
 }
 
 #previously-searched {
