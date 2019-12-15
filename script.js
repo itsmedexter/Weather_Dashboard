@@ -45,10 +45,45 @@ $("#add-city").on("click", function(current) {
             current.preventDefault();
             var inputWeather = $("#city-input").val().trim();
     
+// Five day
+function weatherForcast(fiveDay) {
+var queryURL = 'http://api.openweathermap.org/data/2.5/forecast?q=' + fiveDay + "&units=imperial" + "&APPID=860338c2b1cf62410a87894b92d022a6";
+    $.ajax({
+    url: queryURL,
+    method: "GET"
+    }).then(function(response){
+    console.log(response);
+
+$("#five-day").empty();
+    
+var results = response;
+console.log(results);
+for (var i = 0; i < results.length; i++) {
+    var currentWeather = results[i].main.feels_like;
+    var humidity = results[i].main.humidity;
+    var windSpeed = results[i].wind.speed;
+    console.log(currentWeather);
+    var newDiv = $("<div>");
+    var newI = $("<img>")
+    var newT = $("<p>");
+    var newW = $("<p>");
+    var newIc = $("<img>").attr("http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
+    newT.text("Temperature: " + currentWeather);
+    newH.text("Humidity: " + humidity);
+     newDiv.append(newIc)
+    newDiv.append(newT);
+    newDiv.append(newH);
+
+    $("#five").append(newDiv);
+}
+    
+FiveDayForcast(fiveDay)
+    });
+
+
     weatherForcast(inputWeather);
-        });
-
-
+        }
+    });
 // ********* 2 different ajax calls for current, five day. five day has to change for day parset 4 objects, [i] specif place in object] specif day in objects in an array. look at sample  bands in town solved.
 
 //         $("#addCity").on("click",function() {
@@ -66,7 +101,7 @@ $("#add-city").on("click", function(current) {
 
 
 // code 5 day for loop
-// $("#main-current").empty();
+// $("#five-day").empty();
     
 // var results = response;
 // console.log(results);
@@ -76,18 +111,17 @@ $("#add-city").on("click", function(current) {
 //     var windSpeed = results[i].wind.speed;
 //     console.log(currentWeather);
 //     var newDiv = $("<div>");
+//     var newI = $("<img>")
 //     var newT = $("<p>");
-//     var newH = $("<p>");
 //     var newW = $("<p>");
-
+//     var newIc = $("<img>").attr("http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
 //     newT.text("Temperature: " + currentWeather);
 //     newH.text("Humidity: " + humidity);
-//     newW.text("WindSpeed: " + windSpeed);
+//      newDiv.append(newIc)
 //     newDiv.append(newT);
 //     newDiv.append(newH);
-//     newDiv.append(newW);
 
-//     $("#main-current").append(newDiv);
+//     $("#five").append(newDiv);
 // }
 
 
