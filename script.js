@@ -4,6 +4,12 @@
 // 3) 5-Day Forecast with five images that have date, weather icon, temperature, humidity
 
 // Create main divs to hold content. #Container holds three divs, left #mainsearch, right #maincurrent, bellow #mainfiveday has five divs of #weather1, weather2, weather3, weather4, weather5.
+
+// console.log response to verify if handshake has been made with printing of entire object.
+
+//  go through object and pinpoint parameters needed, reference weather api
+
+// This is where things get loopy, I am not sure if I should do the input button first since its one of the first things that starts the function. Also it has a few eventlisteners, such as when input is placed and search button is pressed. One: search for city and get response, two: place current weather information with other parameters, three: place current city in localStorage and location text under previously searched; then a loop going through the five day forcast and listing them accordingly. 
  
 function weatherForcast(weather) {
 
@@ -147,7 +153,7 @@ $("#add-city").on("click", function(current) {
 
 
 
-        // test loop
+        // test loop for 2nd five day, taken from stackoverflow
         function fiveDay2(weather) {
             
         var queryURL = 'http://api.openweathermap.org/data/2.5/weather?q=' + weather + "&units=imperial" + "&APPID=860338c2b1cf62410a87894b92d022a6";
