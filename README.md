@@ -1,6 +1,8 @@
 # Weather Dashboard
 
-Here is a Weather Dashboard created in Jquery. User inputs a "city" in the input field. When button clicked, input is saved to history, current weather with five day forcast appears. 
+![Sample](weather_ba.gif)
+
+Here is a Weather Dashboard created in Jquery. User inputs a "city" in the input field. When button clicked, current weather with five day forcast appears. 
 
 # Questions that came about 
 
