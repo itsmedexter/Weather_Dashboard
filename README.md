@@ -1,5 +1,6 @@
 # Weather Dashboard
 
+Updated March 1, before and after screen shot.
 ![Sample](weather_ba.gif)
 
 Here is a Weather Dashboard created in Jquery. User inputs a "city" in the input field. When button clicked, current weather with five day forcast appears. 
