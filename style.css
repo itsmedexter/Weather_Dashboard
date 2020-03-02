@@ -1,3 +1,11 @@
+p {
+    margin: 0px;
+}
+
+h5 {
+    padding: 0px;
+}
+
 #main-current {
     border-radius: 15px;
     color: lightgray;
@@ -11,4 +19,45 @@
 
 #border {
     border-radius: 25px;
+}
+
+/* #weather-data {
+    height: 400px;
+} */
+
+#weather-data p {
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    padding: 0px;
+    margin: 0px;
+}
+
+.card {
+    float: left;
+    margin: 0px 0px 0px 20px;
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    align-items: center;
+}
+
+.fivedays {
+    margin: 0px;
+}
+
+div.card-body p{
+    padding: 0px;
+    margin: 0px;
+}
+
+div.card-body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.fivedayhed {
+    margin-left: 20px;
 }

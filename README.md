@@ -4,9 +4,7 @@ Here is a Weather Dashboard created in Jquery. User inputs a "city" in the input
 
 # Questions that came about 
 
- 1. I need to spend more time with sensei to practice my Google foo.
- 
-2. My for loop is making no sense, maybe it is too late in the evening. 
+ I'll be honest, I couldn't do the icons correctly. I tried diffrent variations and I know the code/link is good. I am not sure.
 
 
 ### Prerequisites

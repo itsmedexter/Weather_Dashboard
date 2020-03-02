@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Dashboard
     </title>
-    <style href="style.css" type="stylesheet"></style>
-    
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -17,71 +17,84 @@
     
 
 </head>
+<title>Weather Dashboard</title>
+</head>
+
 <body>
- <div id="container"><!--main container div-->
+  <div class="container1">
     <h1 class="text-center bg-dark text-white clearfix col-12">Weather Dashboard</h1>
-<div id="bodybox" class="col-12"><!--bodybox div-->    
-        <div id="mainsearch" class="col-2 float-left" style="height: 30rem;"><!--main search div-->
-        <form>
-        <input id="city-input" type="text">
-        <input id="add-city" type="submit" value="City Search">
-        </form>
+  </div>
+  <!--main search div-->
+  <div class="container-search">
+    <form id="city-form" class="col-4">
+      <input id="select-city" type="search">
+      <button id="search-button" type="submit">City Search</button>
 
-        <div class="card my-2" style="width: 17.3rem;">
-            <div class="card-header font-weight-bolder">
-              Previously Searched
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Alameda</li>
-              <li class="list-group-item">Oakland</li>
-              <li class="list-group-item">San Francisco</li>
-              <p id="previously-searched"></p>
-
-            </ul>
+    </form>
+    <h4 class="city-save"></h4>
+    <div>
+      <div id="weather-data" class="container col-8 offset-md-4">
+        <img id="imgIcon" src="http://openweathermap.org/img/wn/02d@2x.png">
+        <h1 id="city-name"></h1>
+        <h4 id="date"></h4>
+        <p id="temperature"></p>
+        <p id="humidity"></p>
+        <p id="wind-speed"></p>
+        <p id="uv-index"></p>
+    </div>
+<!--5 day forcast div-->
+      <div class="container-fluid" id="day-forecast">
+        <h5 class="fivedayhed">5-Day Forecast:</h5>
+        <div id="day1" class="card float-left text-white bg-primary mb-3">
+          <h5 class="fivedays"></h5>
+          <img id="imgIcon" src="http://openweathermap.org/img/wn/02d@2x.png">
+          <div class="card-body">
+            <p></p>
+            <p></p>
           </div>
-        </div><!--main search div-->
-
-<div id="main-current1" class="col-10 float-left p-6" style="height: 20rem;"><!--current weather div-->
-<span id="main-current" class="py-3">xxxxxxxxxx</span>
-</div><!--current weather div-->
- <div id="mainfiveday" class="col-10"><!--5 day forcast div-->
-    <div class="card float-left mx-2 rounded-sm" style="width: 12rem; height: 12rem;">
-        <div class="card-body float-left bg-primary text-white">
-            <h5 class="card-title text-white" id="five-day"></h5>
         </div>
-    </div><!--weather1 div-->
-    <div class="card float-left mx-2" style="width: 12rem; height: 12rem;">
-        <div class="card-body float-left bg-primary text-white">
-            <h5 id="five-day" class="card-title text-white">Card title</h5>
+        <div id="day2" class="card float-left text-white bg-primary mb-3">
+          <h5 class="fivedays"></h5>
+          <img id="imgIcon" src="http://openweathermap.org/img/wn/02d@2x.png">
+          <div class="card-body">
+            <p></p>
+            <p></p>
+          </div>
         </div>
-    </div><!--weather2 div-->
-    <div class="card float-left mx-2" style="width: 12rem; height: 12rem;" id="border">
-        <div class="card-body float-left bg-primary text-white">
-            <h5 id="five-day2" class="card-title text-white">Card title</h5>
+        <div id="day3" class="card float-left text-white bg-primary mb-3">
+          <h5 class="fivedays"></h5>
+          <img id="imgIcon" src="http://openweathermap.org/img/wn/02d@2x.png">
+          <div class="card-body">
+            <p></p>
+            <p></p>
+          </div>
         </div>
-    </div><!--weather3 div-->
-
-<div class="card float-left mx-2" style="width: 12rem; height: 12rem;">
-    <div class="card-body float-left bg-primary text-white">
-        <h5 class="card-title text-white" id="five-day">Card title</h5>
+        <div id="day4" class="card float-left text-white bg-primary mb-3">
+          <h5 class="fivedays"></h5>
+          <img id="imgIcon" src="http://openweathermap.org/img/wn/02d@2x.png">
+          <div class="card-body">
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+        <div id="day5" class="card float-left text-white bg-primary mb-3">
+          <h5 class="fivedays"></h5>
+          <img id="imgIcon" src="http://openweathermap.org/img/wn/02d@2x.png">
+          <div class="card-body">
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+      </div>
     </div>
-</div><!--weather4 div-->
-<div class="card float-left mx-2" style="width: 12rem; height: 12rem;">
-    <div class="card-body float-left bg-primary text-white">
-        <h5 class="card-title text-white">Card title</h5>
-    </div>
-</div><!--weather5 div-->
+    <!-- </div> -->
+  </div>
 
 
- </div><!-- 5 day forcast div-->
-
-
-</div><!--bodybox div-->
-</div><!--main container div-->
-
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script src="script.js"></script>    
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="script.js"></script>
+  <script src="moment.js"></script>
 </body>
+
 </html>
