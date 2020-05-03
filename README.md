@@ -40,4 +40,4 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-* Kerwin helped me a lot with this project. The tutor for showing new posibilities which seem unobtainable at the moment.  
+* Kerwin helped me a lot with this project.  
