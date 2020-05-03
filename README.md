@@ -12,7 +12,7 @@ Here is a Weather Dashboard created in Jquery. User inputs a "city" in the input
 
 ### Prerequisites
 
-Any web browser can access or view link, repository. Use source-code editor to view html javascript files.
+Any web browser can access or view link, repository. Use source-code editor to view html javascript files. 
 
 ## Built With
 
@@ -23,7 +23,7 @@ Any web browser can access or view link, repository. Use source-code editor to v
 
 ## Deployed Link
 
-* [See Live Site](https://itsmedexter.github.io/unit06_Weather_Dashboard/)
+* [See Live Site](https://itsmedexter.github.io/Weather_Dashboard/)
 
 
 ## Authors
