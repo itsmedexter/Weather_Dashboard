@@ -7,7 +7,7 @@ Here is a Weather Dashboard created in Jquery. User inputs a "city" in the input
 
 # Questions that came about 
 
- At first, I couldn't do the icons correctly. Then searched and found another solution by downloading icons needed and use the right one when per weather API.
+ At first, I couldn't do the icons correctly. Then searched and found another solution by downloading icons needed and use the right one when per weather API icon code.
 
 
 ### Prerequisites
